@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing-登录</title>
+    <link rel="stylesheet" href="../CSS/landing.css">
+</head>
+
+<body>
+
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="../im/库洛游戏.png" alt="库洛游戏">
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./job.html">职位</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main>
+        <h2>登录</h2>
+        <section class="landing">
+
+            <form action="#" method="get" class="login-form">
+                <select name="address">+86
+                    <option>中国大陆 +86</option>
+                    <option>中国澳门 +853</option>
+                    <option>法国 +33</option>
+                    <option>德国 +49</option>
+                    <option>印度 +91</option>
+                </select>
+                <input input type="tel" id="phone" name="phone" placeholder="手机号码" pattern="[0-9]{11}" required>
+                <br>
+                <input type="text" id="code" name="code" placeholder="验证码默认为123456" pattern="[0-9]{6}" required>
+                <button type="button" class="button">获取验证码</button>
+                <br>
+                <button type="submit">登录</button>
+                <div>未注册的手机号码验证后将自动创建账号</div>
+                <br>
+                <div class="line"></div>
+                <br>
+                <div>第三方账号快速登录</div>
+                <br>
+                <a href="https://kurogame.jobs.feishu.cn"><img src="../im/抖音.png" alt="抖音"></a>
+                <br>
+                <input type="checkbox" style="width: 10px;">同意并阅读 <a>《隐私声明》</a>
+            </form>
+
+        </section>
+    </main>
+    <script src="../JS/landing.js"></script>
+    <script src="../JS/ajax.js"></script>
+</body>
+
+</html>

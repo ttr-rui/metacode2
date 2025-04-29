@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职位详情 - 库洛游戏校园招聘</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/job-detail.css">
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="../im/库洛游戏.png" alt="库洛游戏">
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./job.html">职位</a></li>
+                    <li><a href="./landing.html">登录</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main>
+        <section class="job-detail">
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> >
+                <a href="job.html">职位列表</a> >
+                <span id="job-title">职位详情</span>
+            </div>
+
+            <div class="detail-container">
+                <div class="detail-header">
+                    <h1 id="detail-title">职位标题</h1>
+                    <div class="meta-info">
+                        <span id="detail-city">城市</span>
+                        <span id="detail-category">分类</span>
+                        <span id="detail-time">发布时间</span>
+                    </div>
+                    <button id="apply-btn" class="apply-button">立即申请</button>
+                </div>
+
+                <div class="detail-content">
+                    <div class="section">
+                        <h2>职位描述</h2>
+                        <div id="detail-description"></div>
+                    </div>
+
+                    <div class="section">
+                        <h2>职位要求</h2>
+                        <div id="detail-requirements"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../JS/ajax.js"></script>
+    <script src="../JS/job-detail.js"></script>
+</body>
+
+</html>

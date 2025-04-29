@@ -1,0 +1,315 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+     line-height: 1.6;
+     color: #333;
+ }
+
+ section {
+     font-size: 0;
+     /* 避免出现幽灵空隙 */
+ }
+
+ .container {
+     font-size: 20px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ img {
+     max-width: 100%;
+     /* 防止溢出父容器 */
+     height: auto;
+ }
+
+ /* 头部导航 */
+ .header {
+     position: relative;
+ }
+
+ .header .container {
+     width: 100%;
+     height: 80px;
+     display: flex;
+     justify-content: space-between;
+     /* 主轴：水平方向 ，将子元素沿主轴两端对齐，剩余空间平均分配在子元素之间。 首个子元素紧贴容器起始端，末尾子元素紧贴容器结束端，中间子元素等间距排列。 */
+     align-items: center;
+     /* 交叉轴：垂直方向 ，子元素沿交叉轴居中对齐，上下（或左右）空间均等。 */
+     padding: 24px;
+ }
+
+ .logo img {
+     width: 103.602px;
+     height: 30px;
+     position: absolute;
+     left: 90px;
+     bottom: 25px;
+ }
+
+ .logo img:hover {
+     transform: translateY(-3px);
+ }
+
+ .container ul li:hover {
+     color: blue;
+ }
+
+ .nav ul {
+     display: flex;
+     position: absolute;
+     right: 255px;
+     top: 8px;
+ }
+
+ .nav ul li {
+     margin: 20px;
+ }
+
+ /* 主内容区 */
+
+ /* 首页轮播图 */
+ .carousel-container {
+     position: relative;
+     max-width: 100%;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ .carousel-slide {
+     display: flex;
+     transition: transform 0.5s ease;
+ }
+
+ .slide {
+     min-width: 100%;
+     /* 每张幻灯片至少占满轮播容器宽度 */
+     height: 600px;
+     object-fit: cover;
+     /* 统一图片比例,防止图片拉伸变形,视觉一致性 */
+ }
+
+ .prev-btn,
+ .next-btn {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background: rgba(117, 117, 117, 0.5);
+     color: white;
+     border: none;
+     padding: 10px;
+     cursor: pointer;
+     /* 切换箭头,用于跳转到指定幻灯片 */
+     border-radius: 10%;
+     /* 边框圆角 */
+ }
+
+ .prev-btn:hover,
+ .next-btn:hover {
+     background: rgba(0, 0, 0, 0.5);
+ }
+
+ .prev-btn {
+     left: 10%;
+ }
+
+ .next-btn {
+     right: 10%;
+ }
+
+ .apply {
+     position: absolute;
+     bottom: 30%;
+     left: 15%;
+     width: 186px;
+     height: 48px;
+     line-height: 48px;
+     font-size: 20px;
+     color: white;
+     text-align: center;
+     background-color: rgb(75, 116, 192);
+     border-radius: 45%;
+ }
+
+ /* 关于库洛 */
+ .about {
+     width: 100%;
+     height: 424px;
+     background-color: white;
+ }
+
+ h2 {
+     font-size: 50px;
+     text-align: center;
+     color: black;
+     margin: 20px;
+ }
+
+ .about div {
+     width: 100%;
+     height: 270px;
+     padding-left: 150px;
+     padding-right: 150px;
+ }
+
+ .about p {
+     font-size: 18px;
+     color: black;
+     margin: 10px;
+ }
+
+ /* 库洛产品 */
+ .product {
+     width: 100%;
+     height: 1000px;
+     background-color: white;
+ }
+
+ .card {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+
+ .product img {
+     width: 380.66px;
+     height: 214.12px;
+     border-radius: 10%;
+ }
+
+ h4 {
+     font-size: 20px;
+     color: black;
+     font-weight: bold;
+     text-align: center;
+ }
+
+ .product h4 {
+     text-align: left;
+ }
+
+ .product div {
+     font-size: 20px;
+     flex: 1 1 300px;
+     margin-top: 20px;
+ }
+
+ .introduction {
+     font-size: 16px;
+     color: gray;
+     padding-top: 5px;
+ }
+
+ /* 招聘流程 */
+ .process {
+     width: 100%;
+     height: 500px;
+     background-color: rgb(224, 236, 251);
+     padding-top: 20px;
+     text-align: center;
+ }
+
+ .process img {
+     width: 234.75px;
+     height: 234.75px;
+ }
+
+ /* 校招职位 */
+ .school-job {
+     width: 100%;
+     height: 650px;
+     background-color: rgb(224, 236, 251);
+     padding-top: 20px;
+     text-align: center;
+ }
+
+ .job-card {
+     width: 300px;
+     height: 125px;
+     background-color: white;
+     /* padding: 28px; */
+     border-radius: 10%;
+     /* flex: 1; */
+     text-align: center;
+ }
+
+ .job-card:hover {
+     border: 1px solid blue;
+     color: blue;
+ }
+
+ .school-job:hover {
+     color: blue;
+ }
+
+ /* 库洛生活 */
+ .life {
+     width: 100%;
+     height: 450px;
+     background-color: white;
+     padding: 10px;
+ }
+
+ .life img {
+     width: 269.25px;
+     height: 151.45px;
+     margin: 10px;
+ }
+
+ /* 页脚 */
+ .footer1 {
+     width: 100%;
+     height: 154px;
+     line-height: 154px;
+     background-color: rgb(50, 50, 50);
+     color: white;
+     text-align: center;
+ }
+
+ .footer1 img {
+     width: 40px;
+     height: 40px;
+     border-radius: 100%;
+     margin-top: 50px;
+ }
+
+ .footer1 div {
+     flex: 1;
+ }
+
+ .footer2 {
+     width: 100%;
+     height: 124px;
+     background-color: white;
+     color: black;
+     text-align: center;
+     padding-top: 30px;
+     font-size: 14px;
+ }
+
+ .img1 {
+     width: 20px;
+     height: 10px;
+     display: inline-block;
+ }
+
+ .img2 {
+     width: 70px;
+     height: 20px;
+     display: inline-block;
+ }

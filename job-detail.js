@@ -1,26 +1,4 @@
-// job-detail.js
 document.addEventListener('DOMContentLoaded', function () {
-    // // 检查登录状态
-    if (!localStorage.getItem('token')) {
-        alert('请先登录');
-        window.location.href = 'landing.html';
-        return;
-    }
-
-    // 获取URL中的职位ID
-    const urlParams = new URLSearchParams(window.location.search);
-    const jobId = urlParams.get('id');
-
-    if (!jobId) {
-        alert('无效的职位ID');
-        window.location.href = 'job.html';
-        return;
-    }
-
-    const token = localStorage.getItem('token')
-    if (!token) {
-        location.href = '../HTML/job-detail.html'
-    }
 
     // 加载职位详情
     loadJobDetail(jobId);
@@ -64,42 +42,15 @@ function renderJobDetail(job) {
     document.getElementById('detail-location').textContent = job.location;
 }
 
-function applyForJob(jobId) {
-    const token = localStorage.getItem('token');
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-
-    if (!userInfo || !userInfo.resumeComplete) {
-        if (confirm('您还没有完善简历信息，是否现在去完善？')) {
-            window.location.href = '../HTML/profile.html';
+document.querySelectorAll('.apply-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        window.location.href = '../HTML/profile.html';
+        // 检查登录状态
+        if (!localStorage.getItem('token')) {
+            alert('请先登录');
+            window.location.href = 'landing.html';
+            return;
         }
-        return;
-    }
-
-    if (!confirm('确定要申请这个职位吗？')) {
-        return;
-    }
-
-    const applyBtn = document.getElementById('apply-btn');
-    applyBtn.disabled = true;
-    applyBtn.textContent = '申请中...';
-
-    Ajax.post('http://8.134.80.166:89/api/application/apply', { jobId }, {
-        'Authorization': `Bearer ${token}`
-    })
-        .then(response => {
-            if (response.code === 200) {
-                alert('申请成功！');
-                applyBtn.textContent = '已申请';
-            } else {
-                alert(response.msg || '申请失败');
-                applyBtn.disabled = false;
-                applyBtn.textContent = '立即申请';
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('网络错误，请稍后重试');
-            applyBtn.disabled = false;
-            applyBtn.textContent = '立即申请';
-        });
-}
+        showLoginModal();
+    });
+});

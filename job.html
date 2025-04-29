@@ -49,39 +49,41 @@
                 <hr>
                 <div>
                     <h4>城市</h4>
-                    <input type="checkbox">广州
-                    <input type="checkbox">上海
+                    <input type="checkbox" name="city" value="广州">广州
+                    <input type="checkbox" name="city" value="上海">上海
                 </div>
                 <div>
                     <h4>职能分类</h4>
-                    <input type="checkbox">美术类
-                    <input type="checkbox">策划类
-                    <input type="checkbox">技术类
-                    <input type="checkbox">营销类
-                    <input type="checkbox">职能综合类
-                    <input type="checkbox">音频类
-                    <input type="checkbox">视频类
-                    <input type="checkbox">运营类
+                    <input type="checkbox" name="category" value="美术类">美术类
+                    <input type="checkbox" name="category" value="策划类">策划类
+                    <input type="checkbox" name="category" value="技术类">技术类
+                    <input type="checkbox" name="category" value="营销类">营销类
+                    <input type="checkbox" name="category" value="职能综合类">职能综合类
+                    <input type="checkbox" name="category" value="音频类">音频类
+                    <input type="checkbox" name="category" value="视频类">视频类
+                    <input type="checkbox" name="category" value="运营类">运营类
                 </div>
             </div>
 
             <!-- 职位选择 -->
             <div class="job-choose">
+                <br>
                 <h3>开启新的工作（45）</h3>
-                <div>【2025春招】产品运营-鸣潮
-                    广州运营类
-                    职位描述
-                    1、跟进鸣潮的整体测试验证流程，组织多种形式的玩家测试、获取玩家反馈，最终输出优化建议和方案并跟进落地；
-                    2、负责各模块玩法设计相关的专题调查与研究，运用数据、调研等手段完成专题报告，配合策划跟进产品迭代；
-                    3、跟进游戏版本内容，为对应负责的游戏玩法、功能体验负责，并根据对应需求落实日常的具体运营工作；
-                    职位要求
-                    1、本科及以上学历，有一定的用户研究或游戏评测能力；
-                    2、具备基础的数据/用户分析和研究能力，能够完成简单的数据分析、调研方案；
-                    3、热爱游戏，有志于游戏运营岗位的长线发展；深度体验动作游戏、开放世界、二次元品类游戏者优先；
+                <!-- 主要内容区域 -->
+                <div class="container">
+                    <div class="job-info">
+                    </div>
 
-                    注：该岗位有笔试环节。</div>
+                    <div class="job-list" id="jobList">
+                        <!-- 职位列表将通过JS动态生成 -->
+                    </div>
+                </div>
+
             </div>
+
         </section>
+
+
 
 
     </main>
